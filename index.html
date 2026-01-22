@@ -55,7 +55,7 @@
         // Cidade, estado e país
         const city = 'Varzea Alegre,CE,Brazil';
         // URL da API de clima atual
-        const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(city)}`;
+        const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(city)}`;
 
         async function atualizarClima() {
             const tempMainValue = document.getElementById('temp-main-value');
@@ -167,3 +167,4 @@
     </script>
 </body>
 </html>
+
