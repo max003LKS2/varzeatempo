@@ -1,0 +1,86 @@
+/* clima-varzea-alegre-mini.css */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    color: #222;
+    margin: 0;
+    padding: 0;
+    width: 248px;
+    height: 448px;
+    overflow: hidden;
+}
+.container {
+    width: 248px;
+    height: 448px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.scroller {
+    position: absolute;
+    width: 100%;
+    animation: scroll-up 18s linear infinite;
+}
+@keyframes scroll-up {
+    0% { top: 100%; }
+    100% { top: -100%; }
+}
+.info-block {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.info-main {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+.info-label {
+    font-size: 1.1em;
+    color: #1976d2;
+    margin-bottom: 2px;
+}
+.emoji {
+    font-size: 2em;
+    margin-right: 6px;
+}
+.info-detail {
+    font-size: 1.2em;
+    margin: 2px 0 8px 0;
+}
+.section-title {
+    font-size: 1.1em;
+    color: #1565c0;
+    margin: 12px 0 6px 0;
+    font-weight: 600;
+}
+.hourly, .daily {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto 10px auto;
+    font-size: 1.1em;
+}
+.hourly th, .hourly td, .daily th, .daily td {
+    border: none;
+    padding: 4px 0;
+    text-align: center;
+}
+.air-quality {
+    font-weight: bold;
+    color: #388e3c;
+    font-size: 1.2em;
+    margin: 8px 0 0 0;
+}
+::-webkit-scrollbar { display: none; }
+@media (max-width: 248px), (max-height: 448px) {
+    .container { width: 100vw; height: 100vh; }
+    body { width: 100vw; height: 100vh; }
+}
