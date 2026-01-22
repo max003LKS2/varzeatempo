@@ -148,7 +148,8 @@ body {
 .temp-orange { color: #ff9800; }
 .temp-red { color: #e53935; }
 ::-webkit-scrollbar { display: none; }
-@media (max-width: 248px), (max-height: 448px) {
+@media (max-width: 256px), (max-height: 448px) {
     .container { width: 100vw; height: 100vh; }
     body { width: 100vw; height: 100vh; }
 }
+
