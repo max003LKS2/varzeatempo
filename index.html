@@ -7,139 +7,163 @@
     <link rel="stylesheet" href="clima-varzea-alegre-painel.css">
 </head>
 <body>
-        <div class="container">
-            <div class="slide active" id="slide-1">
-                <div style="background:rgba(255,255,255,0.85);border-radius:12px;padding:10px 10px 8px 10px;width:100%;box-sizing:border-box;box-shadow:0 2px 8px #b3c6e6;">
-                    <div class="info-block" style="margin-bottom:6px;">
-                        <div class="info-label">Várzea Alegre, CE</div>
-                        <div class="info-detail" id="datahora"></div>
-                    </div>
-                    <div class="info-block" style="margin-bottom:6px;">
-                        <div class="info-main" id="temp-main"><span class="emoji">🌡️</span>33°C</div>
-                    </div>
-                    <div class="info-block" style="margin-bottom:4px;">
-                        <span class="info-detail"><span class="emoji">🥵</span>Sensação: <span id="temp-sensacao">36°C</span></span>
-                    </div>
-                    <div class="info-block" style="margin-bottom:4px;">
-                        <span class="info-detail"><span class="emoji">🌥️</span>Encoberto</span>
-                    </div>
-                    <div class="info-block" style="margin-bottom:4px;">
-                        <span class="info-detail"><span class="emoji">💧</span>Umidade: 40%</span>
-                    </div>
-                    <div class="info-block" style="margin-bottom:4px;">
-                        <span class="info-detail"><span class="emoji">💨</span>Vento: 13 km/h</span>
-                    </div>
-                    <div class="info-block" style="margin-bottom:4px;">
-                        <span class="info-detail"><span class="emoji">🌧️</span>Chuva: 1%</span>
-                    </div>
-                    <div class="info-block" style="margin-bottom:0;">
-                        <div class="section-title">Qualidade do ar</div>
-                        <div class="air-quality"><span class="emoji">🟢</span>32 - Boa</div>
-                    </div>
+    <div class="container">
+        <div class="slide active" id="slide-1">
+            <div style="background: rgba(255, 255, 255, 0.85); border-radius: 16px; padding: 10px 10px 8px 10px; width: 100%; box-sizing: border-box; box-shadow: 0 2px 8px #b3c6e6;">
+                <div class="info-block">
+                    <div class="info-label">Várzea Alegre, CE</div>
+                    <div class="info-detail" id="datahora"></div>
+                </div>
+                <div class="info-block">
+                    <div class="info-main" id="temp-main"><img src="https://www.imagenspng.com.br/wp-content/uploads/2022/11/emoji-png-3222.png" alt="Termômetro" class="emoji-img" style="width: 28px; vertical-align: middle;"> <span id="temp-main-value"></span></div>
+                </div>
+                <div class="info-block">
+                    <span class="info-detail"><img src="https://www.imagenspng.com.br/wp-content/uploads/2022/11/emoji-png-0061.png" alt="Calor" class="emoji-img" style="width: 22px; vertical-align: middle;"> Sensação: <span id="temp-sensacao"></span></span>
+                </div>
+                <div class="info-block">
+                    <span class="info-detail"><img src="https://www.imagenspng.com.br/wp-content/uploads/2022/11/emoji-png-3231.png" alt="Nublado" class="emoji-img" style="width: 22px; vertical-align: middle;"> <span id="weather-description"></span></span>
+                </div>
+                <div class="info-block">
+                    <span class="info-detail"><img src="https://www.imagenspng.com.br/wp-content/uploads/2022/11/emoji-png-3255.png" alt="Gota de água" class="emoji-img" style="width: 22px; vertical-align: middle;"> <span id="humidity"></span></span>
+                </div>
+                <div class="info-block">
+                    <span class="info-detail"><img src="https://www.imagenspng.com.br/wp-content/uploads/2022/11/emoji-png-3242.png" alt="Vento" class="emoji-img" style="width: 22px; vertical-align: middle;"> <span id="wind-speed"></span></span>
+                </div>
+                <div class="info-block">
+                    <span class="info-detail"><img src="https://www.imagenspng.com.br/wp-content/uploads/2022/11/emoji-png-3237.png" alt="Chuva" class="emoji-img" style="width: 22px; vertical-align: middle;"> <span id="rain-chance"></span></span>
+                </div>
+                <div class="info-block">
+                    <div class="section-title">Índice UV</div>
+                    <div class="uv-index"><img src="https://www.imagenspng.com.br/wp-content/uploads/2022/11/emoji-png-3254.png" alt="UV" class="emoji-img" style="width: 22px; vertical-align: middle;"> <span id="uv-index"></span></div>
                 </div>
             </div>
-            <div class="slide" id="slide-2">
-                <div style="background:rgba(255,255,255,0.88);border-radius:12px;padding:12px 10px 10px 10px;width:100%;box-sizing:border-box;box-shadow:0 2px 8px #b3c6e6;display:flex;flex-direction:column;align-items:flex-start;gap:10px;">
-                    <div class="section-title" style="font-size:1.1em;margin-bottom:6px;">Previsão diária</div>
-                    <div style="display:flex;flex-direction:row;justify-content:space-between;width:100%;gap:6px;">
-                        <div style="flex:1;text-align:center;">
-                            <div style="font-weight:700;color:#1976d2;">Hoje</div>
-                            <div style="font-size:1.1em;font-weight:900;" class="temp-color">34°</div>
-                            <div style="font-size:0.95em;">🌤️</div>
-                            <div style="font-size:0.95em;">1% 🌧️</div>
-                            <div style="font-size:0.85em;color:#888;">23°</div>
-                        </div>
-                        <div style="flex:1;text-align:center;">
-                            <div style="font-weight:700;color:#1976d2;">Sex</div>
-                            <div style="font-size:1.1em;font-weight:900;" class="temp-color">36°</div>
-                            <div style="font-size:0.95em;">🌤️</div>
-                            <div style="font-size:0.95em;">5% 🌧️</div>
-                            <div style="font-size:0.85em;color:#888;">24°</div>
-                        </div>
-                        <div style="flex:1;text-align:center;">
-                            <div style="font-weight:700;color:#1976d2;">Sáb</div>
-                            <div style="font-size:1.1em;font-weight:900;" class="temp-color">35°</div>
-                            <div style="font-size:0.95em;">🌤️</div>
-                            <div style="font-size:0.95em;">10% 🌧️</div>
-                            <div style="font-size:0.85em;color:#888;">23°</div>
-                        </div>
-                        <div style="flex:1;text-align:center;">
-                            <div style="font-weight:700;color:#1976d2;">Dom</div>
-                            <div style="font-size:1.1em;font-weight:900;" class="temp-color">35°</div>
-                            <div style="font-size:0.95em;">🌤️</div>
-                            <div style="font-size:0.95em;">24% 🌧️</div>
-                            <div style="font-size:0.85em;color:#888;">23°</div>
-                        </div>
-                    </div>
-                    <div class="info-detail" style="margin-top:8px;font-size:0.98em;">Hoje é <span id="data-atual"></span> • Atualizado às <span id="hora-atual"></span></div>
-                </div>
-            </div>
-            <!-- Slide 3 removido, previsão diária agora está no slide 2 -->
         </div>
-        <script>
-            // Função para gradiente de cor de temperatura (azul a vermelho)
-            function tempToColor(temp) {
-                // 15°C = azul #2196f3, 22.5°C = verde #43a047, 27.5°C = laranja #ff9800, 35°C = vermelho #e53935
-                if (temp <= 15) return '#2196f3';
-                if (temp >= 35) return '#e53935';
-                // Interpolação
-                if (temp <= 22.5) {
-                    // azul para verde
-                    return interpolateColor([33,150,243],[67,160,71],(temp-15)/7.5);
-                } else if (temp <= 27.5) {
-                    // verde para laranja
-                    return interpolateColor([67,160,71],[255,152,0],(temp-22.5)/5);
-                } else {
-                    // laranja para vermelho
-                    return interpolateColor([255,152,0],[229,57,53],(temp-27.5)/7.5);
+        <div class="slide" id="slide-2">
+            <div style="background: rgba(255, 255, 255, 0.88); border-radius: 12px; padding: 12px 10px 10px 10px; width: 100%; box-sizing: border-box; box-shadow: 0 2px 8px #b3c6e6; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+                <div class="section-title">Previsão diária</div>
+                <div id="daily-forecast" style="display: flex; flex-direction: row; justify-content: space-between; width: 100%; gap: 6px;">
+                    <!-- Previsões diárias serão inseridas aqui -->
+                </div>
+                <div class="info-detail">Hoje é <span id="data-atual"></span> • Atualizado às <span id="hora-atual"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chave da API do WeatherAPI
+        const apiKey = '9c78e1225e914ee6b61192820262201';
+        // Cidade, estado e país
+        const city = 'Varzea Alegre,CE,Brazil';
+        // URL da API de clima atual
+        const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(city)}`;
+
+        async function atualizarClima() {
+            const tempMainValue = document.getElementById('temp-main-value');
+            const tempSensacao = document.getElementById('temp-sensacao');
+            const weatherDescription = document.getElementById('weather-description');
+            const humidity = document.getElementById('humidity');
+            const windSpeed = document.getElementById('wind-speed');
+            const rainChance = document.getElementById('rain-chance');
+            const uvIndex = document.getElementById('uv-index');
+            const dailyForecast = document.getElementById('daily-forecast');
+            try {
+                // Busca clima atual da WeatherAPI
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                if (!data || !data.current || !data.location) {
+                    tempMain.textContent = 'Erro ao obter clima atual';
+                    tempSensacao.textContent = '';
+                    weatherDescription.textContent = '';
+                    humidity.textContent = '';
+                    windSpeed.textContent = '';
+                    rainChance.textContent = '';
+                    airQuality.textContent = '';
+                    dailyForecast.innerHTML = '';
+                    return;
                 }
+
+                // Temperatura principal
+                tempMainValue.textContent = `${Math.round(data.current.temp_c)}°C`;
+                // Sensação térmica
+                tempSensacao.textContent = `${Math.round(data.current.feelslike_c)}°C`;
+                // Descrição do tempo traduzida
+                const condicaoEn = data.current.condition.text.toLowerCase();
+                const traducoes = {
+                    'sunny': 'Ensolarado',
+                    'clear': 'Limpo',
+                    'partly cloudy': 'Parcialmente nublado',
+                    'cloudy': 'Nublado',
+                    'overcast': 'Encoberto',
+                    'mist': 'Névoa',
+                    'patchy rain possible': 'Possibilidade de chuva isolada',
+                    'rain': 'Chuva',
+                    'light rain': 'Chuva leve',
+                    'moderate rain': 'Chuva moderada',
+                    'heavy rain': 'Chuva forte',
+                    'thunderstorm': 'Trovoada',
+                    'snow': 'Neve',
+                    'fog': 'Nevoeiro',
+                    'drizzle': 'Garoa',
+                    'freezing fog': 'Nevoeiro congelante',
+                    'patchy snow possible': 'Possibilidade de neve isolada',
+                    'patchy sleet possible': 'Possibilidade de granizo isolado',
+                    'patchy freezing drizzle possible': 'Possibilidade de garoa congelante isolada',
+                    'blizzard': 'Nevasca',
+                    'ice pellets': 'Granizo',
+                    'torrential rain shower': 'Chuva torrencial',
+                    'light snow': 'Neve leve',
+                    'moderate snow': 'Neve moderada',
+                    'heavy snow': 'Neve forte',
+                    'moderate or heavy rain shower': 'Chuva moderada ou forte',
+                    'moderate or heavy showers of rain': 'Chuva moderada ou forte',
+                    'moderate or heavy snow showers': 'Neve moderada ou forte',
+                    'moderate or heavy sleet showers': 'Granizo moderado ou forte',
+                    'patchy light rain': 'Chuva leve isolada',
+                    'patchy moderate rain': 'Chuva moderada isolada',
+                    'patchy heavy rain': 'Chuva forte isolada',
+                    'patchy light snow': 'Neve leve isolada',
+                    'patchy moderate snow': 'Neve moderada isolada',
+                    'patchy heavy snow': 'Neve forte isolada',
+                };
+                weatherDescription.textContent = traducoes[condicaoEn] || data.current.condition.text;
+                // Umidade
+                humidity.textContent = `${data.current.humidity}%`;
+                // Vento
+                windSpeed.textContent = `${Math.round(data.current.wind_kph)} km/h`;
+                // Chance de chuva (precipitação)
+                rainChance.textContent = `${data.current.precip_mm} mm`;
+                // Índice UV
+                uvIndex.textContent = `${data.current.uv}`;
+
+                // Atualizando data e hora
+                const agora = new Date(data.location.localtime);
+                const dias = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+                const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+                const dataAtual = `${dias[agora.getDay()]}, ${agora.getDate()} ${meses[agora.getMonth()]} ${agora.getFullYear()}`;
+                const horaAtual = `${agora.getHours().toString().padStart(2, '0')}:${agora.getMinutes().toString().padStart(2, '0')}`;
+                document.getElementById('datahora').textContent = `${dataAtual} • ${horaAtual}`;
+                document.getElementById('hora-atual').textContent = horaAtual;
+                document.getElementById('data-atual').textContent = dataAtual;
+
+                // Remove previsão diária pois WeatherAPI free não retorna previsão extendida neste endpoint
+                dailyForecast.innerHTML = '<span style="color:gray">Previsão estendida não disponível neste plano</span>';
+
+            } catch (error) {
+                tempMain.textContent = 'Erro ao atualizar o clima';
+                tempSensacao.textContent = '';
+                weatherDescription.textContent = '';
+                humidity.textContent = '';
+                windSpeed.textContent = '';
+                rainChance.textContent = '';
+                airQuality.textContent = '';
+                dailyForecast.innerHTML = '';
+                console.error("Erro ao atualizar o clima:", error);
             }
-            function interpolateColor(rgb1, rgb2, t) {
-                return `rgb(${Math.round(rgb1[0]+(rgb2[0]-rgb1[0])*t)},${Math.round(rgb1[1]+(rgb2[1]-rgb1[1])*t)},${Math.round(rgb1[2]+(rgb2[2]-rgb1[2])*t)})`;
-            }
-            function colorTemp(element, temp) {
-                element.style.color = tempToColor(temp);
-            }
-            // Temperatura principal
-            const tempMain = document.getElementById('temp-main');
-            const tempValue = 33;
-            colorTemp(tempMain, tempValue);
-            // Sensação térmica
-            const tempSens = document.getElementById('temp-sensacao');
-            colorTemp(tempSens, 36);
-            // Temperaturas nas tabelas
-            document.querySelectorAll('.temp-color').forEach(function(td) {
-                let t = td.textContent.match(/\d+/);
-                if (t) colorTemp(td, parseInt(t[0]));
-            });
-            // Slides
-            const slides = document.querySelectorAll('.slide');
-            let current = 0;
-            function showSlide(idx) {
-                slides.forEach((s, i) => {
-                    s.classList.toggle('active', i === idx);
-                });
-            }
-            setInterval(() => {
-                current = (current + 1) % slides.length;
-                showSlide(current);
-            }, 15000);
-            showSlide(0);
-            // Data e hora
-            function pad(n){return n<10?'0'+n:n;}
-            function atualizaDataHora() {
-                const agora = new Date();
-                const dias = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
-                const meses = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
-                const data = `${dias[agora.getDay()]}, ${pad(agora.getDate())} ${meses[agora.getMonth()]} ${agora.getFullYear()}`;
-                const hora = `${pad(agora.getHours())}:${pad(agora.getMinutes())}`;
-                document.getElementById('datahora').textContent = `${data} • ${hora}`;
-                document.getElementById('hora-atual').textContent = hora;
-                document.getElementById('data-atual').textContent = data;
-                document.getElementById('data-ar').textContent = data;
-            }
-            atualizaDataHora();
-            setInterval(atualizaDataHora, 10000);
-        </script>
+        }
+
+        // Atualizar a cada 30 minutos
+        setInterval(atualizarClima, 1800000); 
+        atualizarClima(); // Chama a função logo ao carregar
+    </script>
 </body>
 </html>
